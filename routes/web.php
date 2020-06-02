@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::post('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+
